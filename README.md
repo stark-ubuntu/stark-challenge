@@ -25,3 +25,8 @@ Desafio iniciado no dia 06/10/24 às 00:19
 
 > Depois de idealizar, estruturar e taskear o projeto, chegou a hora de descansar um pouco para colocar a mão na massa já já! Horário de pausa 02:25  
 
+Trabalho retomado - 07/10 às 14:00
+
+Inicianda analise do ambiente Stark e acessando o Dash.
+
+> Bug ou má experiencia -> Quando fui criar meu acesso na Stark Bank, após finalizar todos os passos (ultimo mostrado, baixar o Stark Auth e scannear o QRCode). Sou redirecionado para novamente para o link do invite ou invés do Dashboard já logado. Precisei apagar a url /invite adiante.
