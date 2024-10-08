@@ -25,7 +25,7 @@ Desafio iniciado no dia 06/10/24 às 00:19
 
 > Depois de idealizar, estruturar e taskear o projeto, chegou a hora de descansar um pouco para colocar a mão na massa já já! Horário de pausa 02:25  
 
-Trabalho retomado - 07/10 às 14:00
+### Trabalho retomado - 07/10 às 14:00
 
 Inicianda analise do ambiente Stark e acessando o Dash.
 
@@ -39,3 +39,5 @@ Adiantei bastante coisa com relação a configuração do ambiente, conexão com
  - debezium monitorando corretamente a tabela
  - debezium escrevendo no topico corretamente
  - teste codados para invoice-backend
+
+### Trabalho retomado - 08/10 às 09:20
