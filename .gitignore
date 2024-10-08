@@ -1,4 +1,5 @@
 /invoice-backend
+/credit-backend
 /postgres/data
 .env
 **/.env
