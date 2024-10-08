@@ -16,7 +16,7 @@ Desafio iniciado no dia 06/10/24 às 00:19
 
 ### Issues criada para cada microserviço.
 
-- [ ] https://github.com/stark-ubuntu/invoice-backend/issues
+- [ x ] https://github.com/stark-ubuntu/invoice-backend/issues
 - [ ] https://github.com/stark-ubuntu/credit-backend/issues
 - [ ] https://github.com/stark-ubuntu/transfer-backend
 - [ ] https://github.com/stark-ubuntu/devops-backend
