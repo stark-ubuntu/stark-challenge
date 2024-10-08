@@ -2,4 +2,4 @@
 /postgres/data
 .env
 **/.env
-
+create-connector.sh
