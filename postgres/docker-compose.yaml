@@ -1,0 +1,27 @@
+x-postgres-location:
+  &postgres-location
+  volumes:
+    - ${AIRFLOW_POST_PROJ_DIR:-.}/data:/var/lib/postgresql/data
+    - ${AIRFLOW_POST_PROJ_DIR:-.}/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+services:
+  postgres:
+    <<: *postgres-location
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: challenge
+      POSTGRES_PASSWORD: challenge
+      POSTGRES_DB: challenge
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "challenge"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+    command: >
+      postgres -c wal_level=logical
+      -c max_replication_slots=4
+      -c max_wal_senders=4
+
