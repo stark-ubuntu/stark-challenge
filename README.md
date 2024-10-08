@@ -30,3 +30,12 @@ Trabalho retomado - 07/10 às 14:00
 Inicianda analise do ambiente Stark e acessando o Dash.
 
 > Bug ou má experiencia -> Quando fui criar meu acesso na Stark Bank, após finalizar todos os passos (ultimo mostrado, baixar o Stark Auth e scannear o QRCode). Sou redirecionado para novamente para o link do invite ou invés do Dashboard já logado. Precisei apagar a url /invite adiante.
+
+Adiantei bastante coisa com relação a configuração do ambiente, conexão com a Stark etc. Amanha continuarei e pretendendo finalizar antes das 12h
+ - Compose banco de dados, com registro de clientes fictícios, criando schemas, usuario do debezium, etc...
+ - busca aleatorio dos clientes
+ - cron de 3h em 3h até 24h
+ - conexão com a stark (consegui chamar o Balance.get())
+ - debezium monitorando corretamente a tabela
+ - debezium escrevendo no topico corretamente
+ - teste codados para invoice-backend
