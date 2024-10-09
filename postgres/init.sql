@@ -1,6 +1,7 @@
 CREATE SCHEMA airflow;
 CREATE SCHEMA invoice;
 CREATE SCHEMA credit;
+CREATE SCHEMA transfer;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -12,8 +13,23 @@ CREATE TABLE invoice.person (
 
 CREATE TABLE invoice.invoicing (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    taxId VARCHAR(11) NOT NULL UNIQUE,
+    taxId VARCHAR(11) NOT NULL,
     amount BIGINT NOT NULL
+);
+
+CREATE TABLE credit.transfer (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    taxId VARCHAR(11) NOT NULL,
+    amount BIGINT NOT NULL,
+    status VARCHAR(11) NOT null
+);
+
+CREATE TABLE transfer.paid (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    inTaxId VARCHAR(11) NOT NULL,
+    outTaxId VARCHAR(11) NOT NULL,
+    amount BIGINT NOT NULL,
+    status VARCHAR(11) NOT null
 );
 
 INSERT INTO invoice.person (taxId, name) VALUES ('85666113062', 'Ana Silva');
