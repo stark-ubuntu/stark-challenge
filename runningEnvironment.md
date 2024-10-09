@@ -48,9 +48,9 @@ Transfer -> Here I consider everything related to bank transfers. This app liste
 ## How to run locally?
 
 To run this challange locally, follow the steps below.
-> For this step we will need git and docker installed ([How to install git?]https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git & [How to install docker?]https://docs.docker.com/engine/install/)
+> For this step we will need git and docker installed ([How to install git?](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git) & [How to install docker?](https://docs.docker.com/engine/install/))
 
-1. Clone the repository [star-challenge]https://github.com/stark-ubuntu/stark-challenge
+1. Clone the repository [star-challenge](https://github.com/stark-ubuntu/stark-challenge)
 2. In a terminal navigate to the postgresql/ folder of the repository you just cloned.
 3. Run the command `docker compose up -d`. This will create the postgres container.
 4. Still in the same terminal, return a folder level `cd ..`
@@ -58,12 +58,12 @@ To run this challange locally, follow the steps below.
 
 At this point, your environment is almost ready to clone the app repositories into quarkus.
 
-1. install [ngrok]https://dashboard.ngrok.com/get-started/setup/linux which is a tool that will help us configure our webhook on Stark Bank.
+1. install [ngrok](https://dashboard.ngrok.com/get-started/setup/linux) which is a tool that will help us configure our webhook on Stark Bank.
 
 ## Shall we clone the apps?
 
-1. Clone the repositories [invoice-backend]https://github.com/stark-ubuntu/invoice-backend , [credit-backend]https://github.com/stark-ubuntu/credit-backend , [transfer-backend]https://github.com/stark-ubuntu/transfer-backend
-2. Follow the [Stak Bank documentation]https://starkbank.com/docs/api#authentication to generate the private and public keys that are required for everything to work properly.
+1. Clone the repositories [invoice-backend](https://github.com/stark-ubuntu/invoice-backend), [credit-backend](https://github.com/stark-ubuntu/credit-backend), [transfer-backend](https://github.com/stark-ubuntu/transfer-backend)
+2. Follow the [Stak Bank documentation](https://starkbank.com/docs/api#authentication) to generate the private and public keys that are required for everything to work properly.
 3. Add the keys to the invoice-backend and transfer-backend projects
 4. You'll notice that in all the projects, application.yml, our configuration file, contains the following snippet
 > id: ${ID_ACCOUNT:0000000000}
