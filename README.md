@@ -42,3 +42,6 @@ Adiantei bastante coisa com relação a configuração do ambiente, conexão com
 
 ### Trabalho retomado - 08/10 às 09:20
 Concluido invoices-backend -> https://github.com/stark-ubuntu/invoice-backend/issues?q=is%3Aissue+is%3Aclosed
+
+### walking skeleton
+Finalizado. Todas as peças principais desenolvidas, se comunicando e funcionando independentemente da outra.
