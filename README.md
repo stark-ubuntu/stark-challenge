@@ -3,7 +3,7 @@ Repositório criado para armazenar toda a evolução e raciocínio durante o des
 
 
 ## Para saber como executar, motivação, arquitetura
-Veja o [read a seguir](https://github.com/stark-ubuntu/stark-challenge/blob/main/runningEnvironment.md#running-the-development-environment) 
+Veja o [readme a seguir](https://github.com/stark-ubuntu/stark-challenge/blob/main/runningEnvironment.md#running-the-development-environment) 
 
 ### Inicio do Desafio
 
