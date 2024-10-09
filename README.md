@@ -2,6 +2,9 @@
 Repositório criado para armazenar toda a evolução e raciocínio durante o desafio proposto.
 
 
+## Para saber como executar, motivação, arquitetura
+Veja o [read a seguir]https://github.com/stark-ubuntu/stark-challenge/blob/main/runningEnvironment.md#running-the-development-environment 
+
 ### Inicio do Desafio
 
 Desafio iniciado no dia 06/10/24 às 00:19
