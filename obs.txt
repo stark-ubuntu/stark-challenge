@@ -1,0 +1,9 @@
+
+Update an Invoice, diz que o amount é opcional, mas se nao passado a sdk devolve um erro. Não reconhece o campo status
+
+
+Não temos opcão para apagar um invoice
+
+Sugestão: Criar expection personalizadas.
+
+Não esta tão claro como o output do Event vem e como Deserializar ele, precisei ver a implementação da JDK para entender que estavam usando Deserializer do gson 

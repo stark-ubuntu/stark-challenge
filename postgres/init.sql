@@ -13,23 +13,23 @@ CREATE TABLE invoice.person (
 
 CREATE TABLE invoice.invoicing (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    taxId VARCHAR(11) NOT NULL,
+    taxId VARCHAR(255) NOT NULL,
     amount BIGINT NOT NULL
 );
 
 CREATE TABLE credit.transfer (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    taxId VARCHAR(11) NOT NULL,
+    taxId VARCHAR(255) NOT NULL,
     amount BIGINT NOT NULL,
-    status VARCHAR(11) NOT null
+    status VARCHAR(255) NOT null
 );
 
 CREATE TABLE transfer.paid (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    inTaxId VARCHAR(11) NOT NULL,
-    outTaxId VARCHAR(11) NOT NULL,
+    inTaxId VARCHAR(255) NOT NULL,
+    outTaxId VARCHAR(255) NOT NULL,
     amount BIGINT NOT NULL,
-    status VARCHAR(11) NOT null
+    status VARCHAR(255) NOT null
 );
 
 INSERT INTO invoice.person (taxId, name) VALUES ('85666113062', 'Ana Silva');
@@ -59,8 +59,20 @@ GRANT ALL PRIVILEGES ON DATABASE challenge TO debezium;
 
 GRANT USAGE ON SCHEMA invoice TO debezium;
 
-GRANT INSERT, SELECT ON invoice.invoicing TO debezium;
+GRANT USAGE ON SCHEMA credit TO debezium;
+
+GRANT USAGE ON SCHEMA transfer TO debezium;
+
+GRANT INSERT, UPDATE, DELETE ON transfer.paid TO debezium;
+
+GRANT INSERT, UPDATE, DELETE ON credit.transfer TO debezium;
+
+GRANT INSERT, UPDATE, DELETE ON invoice.invoicing TO debezium;
 
 ALTER USER debezium WITH SUPERUSER;
+
+CREATE PUBLICATION paid FOR TABLE transfer.paid;
+
+CREATE PUBLICATION transfer FOR TABLE credit.transfer;
 
 CREATE PUBLICATION invoicing FOR TABLE invoice.invoicing;
