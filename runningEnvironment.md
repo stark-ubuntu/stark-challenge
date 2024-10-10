@@ -71,6 +71,31 @@ This shows us that this file makes use of environment variables. And for quarkus
 
 Almost there....
 
+## Debezium
+
+In a terminal run the command 
+> curl -i -X POST  \
+    -H "Accept:application/json"\
+    -H  "Content-Type:application/json" \
+    --data '{
+      "name": "life-cycle-challenge",
+      "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "'"$(ip -4 addr show docker0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')"'",
+        "database.port": "5432",
+        "database.user": "debezium",
+        "database.password": "debezium",
+        "database.dbname": "challenge",
+        "schema.include.list": "invoice, credit, transfer",
+        "database.server.name": "challenge",
+        "table.include.list": "invoice.invoicing, credit.transfer, transfer.paid",
+        "plugin.name": "pgoutput",
+        "topic.prefix": "life-cycle-challenge"
+      }
+    }' \
+    http://localhost:8083/connectors/
+
+
 ## Let's start the Apps!
 
 1. In the root of each project, run the command `mvn compile quarkus:dev`.
