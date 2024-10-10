@@ -19,10 +19,10 @@ Desafio iniciado no dia 06/10/24 às 00:19
 
 ### Issues criada para cada microserviço.
 
-- [ x ] https://github.com/stark-ubuntu/invoice-backend/issues
-- [ ] https://github.com/stark-ubuntu/credit-backend/issues
-- [ ] https://github.com/stark-ubuntu/transfer-backend
-- [ ] https://github.com/stark-ubuntu/devops-backend
+- [x] https://github.com/stark-ubuntu/invoice-backend/issues
+- [x] https://github.com/stark-ubuntu/credit-backend/issues
+- [x] https://github.com/stark-ubuntu/transfer-backend
+- [x] https://github.com/stark-ubuntu/devops-backend
 - [ ] https://github.com/stark-ubuntu/streaming-transfer-pyspark
 - [ ] https://github.com/stark-ubuntu/batch-invoice-enrichment-pyspark
 
